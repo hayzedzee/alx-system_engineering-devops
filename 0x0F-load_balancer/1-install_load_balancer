@@ -4,5 +4,5 @@
 
 sudo apt install -y haproxy
 sudo sed -i '35 a frontend http\n\tbind *:80\n\tmode http\n\tdefault_backend web-backend\n'  /etc/haproxy/haproxy.cfg
-sudo sed -i '40 a backend web-backend\n\tbalance roundrobin\n\tmode http\n\tserver 45883-web-01  54.84.51.246:80 check\n\tserver 45883-web-02 54.221.184.20:80 check\n' /etc/haproxy/haproxy.cfg
+sudo sed -i '40 a backend web-backend\n\tbalance roundrobin\n\tmode http\n\tserver 45883-web-01 54.84.51.246:80 check\n\tserver 45883-web-02 54.221.184.20:80 check\n' /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
