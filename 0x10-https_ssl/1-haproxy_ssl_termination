@@ -36,6 +36,7 @@ default
         
         frontend firstbalance
         bind *:80
+        bind *:443 ssl crt /etc/haproxy/certs/www.hayzedzeey.tech.pem
         option forwardfor
         default_backend webservers
         
